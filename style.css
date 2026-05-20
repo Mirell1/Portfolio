@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/*marrom escuro: #401f18 rosa: #ea8fab rosa do fundo: #f5cad9*/
+/*font-family: "IBM Plex Mono", monospace;*/
+
+*{
+    box-sizing: border-box;
+    margin: 0%; /*Remove a margem padrao dos obejtos*/
+    padding: 0%; /*remove o preenchimento padrao dos elementos*/
+}
+
+/*Bloco onde eu mudo a cor do corpo inteiro do meu site*/
+body{
+    background-color: #f5cad9;
+}
+/*bloco do header, onde fica o nav e os botoes*/
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color:#ea8fab ; /*muda a cor do meu header*/
+    height: 104px;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+/*modificações nos botoes do nav*/
+nav button{
+    text-decoration: none; /*tirar a sublinhação do link*/
+    font-family: "IBM Plex Mono", monospace; /*mudar a fonte do texto do botao*/
+    background-color:  #ea8fab; /*cor de fundp*/
+    font-size: medium; /*tamanho da fonte*/
+    padding: 9px 15px; /*tamanho do botao, tanto altura quanto largura*/
+    border-radius: 22px; /*raio da borda do botao, serve pra ele ficar arrendondado nos cantos*/
+    color: white; /*cor da fonte*/
+    border: solid 3px white; /*estilo, tamnho e cor da margem do meu botao*/
+    margin: 5px;
+}
+
+/*bloco onde vai meu nome no header*/
+#nome{
+    font-size: 38px; /*tamanho da fonte*/
+    font-family: "IBM Plex Mono", monospace; /*estilo da fonte*/
+    color: white; /*cor da fonte*/
+    margin-left: 28px; /*margem do texto da borda esquerda da tela*/
+}
+/*bloco do meu sobrenome no header*/
+#sobrenome{
+    font-size: 17px; /*tamanho da fonte*/
+    font-family: "IBM Plex Mono", monospace; /*estilo da fonte*/
+    color: white; /*cor da fonte*/
+    margin-left: 65px; /*margem do texto da borda esquerda da tela*/
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*seção onde fica a minha apresentação inicial*/
+#apresentação {  
+    background-color: aqua;
+    height: 480px;
+    width: 900px;
+    color: #401f18; /*cor do texto*/
+    font-family: "IBM Plex Mono", monospace; /*fonte o texto*/
+    font-weight: 500; /*peso ou grossura do texto pra deixar ele em negrito*/
+    font-style: normal; /*estilo da fonte*/
+}
+
+/*parte textual da apresentacao*/
+.eu{
+    display: flex; /*ativa o modo de display flexivel, permitindo posicionar os elemntos como voce quer*/
+  /*tamanho que ela ocupa na tela*/
+    margin-top: 10px; /*margem da parte de cima separando o header da seção da apresentação*/
+}
+
+/*as imagens que estao no bloco da "eu" da apresentação*/
+.eu img{
+    height: 50px; /*altura da imagem*/
+    width: 50px; /*largura da imagem*/
+    object-fit: cover; /*pra nao distorcer a imagem*/
+}
+/* era pra ser o tamnanho especifico da imagem das redes socias
+.redes{
+    height: 100px ;
+    width: 100px;
+    object-fit: cover;
+}*/
+
+/*bloco onde eu edito o tamanho da minha foto pessoal*/
+#minhaFoto{
+    height: 200px; /*altura da imagem*/
+    width: 200px; /*largura da imagem*/
+    object-fit: cover; /*pra nao distorcer a imagem*/
+    }
+
+/*seção do meu "sobre mim"*/
+#sobre_mim{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5cad9;
+    height: 100vh;
+    width: 100%;
+    margin-top: 80px;
+}
+
+/*bloco do texto sobre mim*/
+#descricao{
+    color: #401f18; /*cor da fonte*/
+    font-family: "IBM Plex Mono", monospace; /*estilo da fonte*/
+    text-align: center; /*centralizar o texto no site*/
+    font-weight: 700; /*peso ou grossura do texto pra deixar ele em negrito*/
+    font-style: normal; /*forma da fonte*/
+    width: 500px;
+}
+
+#descricao p{
+    font-size: 18px;
+}
+
+
+
+/*seção de skis*/
+#skils{
+    display: flex; /**/
+    justify-content: center; /**/
+    flex-direction: column;
+}
+
+.habil{
+    display: flex;
+
+}
+
+/*blocos com as minhas soft skils*/
+.soft_skils{
+    display: flex;
+    flex-direction: column; 
+    background-color: #f5cad9; /*cor dos blocos*/
+    width: 200px; /*largura dos blocos*/
+    height: 200px;/*altura dos blcos*/
+    color: #401f18; /*cor da fonte*/
+    font-family: "IBM Plex Mono", monospace; /*estilo da fonte*/
+    padding: 11px; /*espaçamento interno entre e o conteudo e a borda*/
+    border: solid 1px #401f18; /*estilo, tamanho e cor das bordas dos blocos das skils*/
+    margin-top: 80px;
+}
+
+.titulos{
+    color: #401f18;
+    font-family: "IBM Plex Mono", monospace; /*estilo da fonte*/
+    background-color: #ea8fab;
+    text-align: center;
+    padding: 4px 35px;
+    border: solid 2px #401f18;
+    width: 270px;
+    margin-top: 50px;
+}
+
+.title{
+    width: 100%;
+    height: 80px;
+    margin-left: 180px;
+}
+/*pequena descricao da soft skils*/
+.soft_skils p{
+    font-size: 14px; /*tamanho da fonte*/
+}
+
+/*titulo das soft skils*/
+.soft_skils h2{
+    font-size: 15px; /*tamanho da fonte*/
+}
+
+/*iamgens das soft skils*/
+.soft_skils img{
+    display: flex;
+    height: 70px; /*altura da imagem*/
+    width: 70px; /*largura da imagem*/
+    object-fit: cover; /*pra nao distorcer a imagem*/
+}
+
+/*bloco das hard skils*/
+.hard_skils{
+    display: flex;
+    flex-direction: column;
+    background-color: #f5cad9; /*cor do fundo dos blocos*/
+    width: 200px; /*largura dos blocos*/
+    height: 200px; /*tamanho dos blocos*/ 
+    color: #401f18; /*cor da fonte*/
+    font-family: "IBM Plex Mono", monospace; /*estilo da fonte*/
+    padding: 11px; /*espaçamento interno entre e o conteudo e a borda*/
+    border: solid 1px #401f18; /*estilo, tamanho  cor da borda dos blocos*/
+}
+
+.hard_skils img{
+    display: flex;
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+
+/*pequena descricao da hard skils*/
+.hard_skils p{
+    font-size: 14px; /*tamanho da fonte*/
+}
+
+
+
+/*titulo das hard skils*/
+.hard_skils h2{
+    font-size: 15px; /*tamanho da fonte*/
+}
+
+
+/*cada bloco dos projeotos*/
+.trabalhos{
+    background-color: #ffffff; /*cor dos blocos*/
+    width: 280px; /**/
+    height:400px; /**/
+    padding: 10px;/**/
+    font-family: "IBM Plex Mono", monospace; /*estilo da fonte*/
+    margin: 15px;
+    margin-bottom: 270px;
+}
+
+/*imagens dos meus projetos*/
+.trabalhos img{
+    height: 200px; /*altura*/
+    width: 200px; /*largura*/
+    margin-bottom: 20px;
+}
+
+.trabalhos P{
+    font-size: 13px;
+    font-weight: 430;
+}
+
+/*secão onde sera exposto meus trabalhos*/
+#projetos{
+    display: flex;
+    margin-top: 100px;
+    background-color: #f5cad9;
+    justify-content: center;
+    text-align: center;
+}
+
+/*botao onde da pra clicar e ver os projetos*/
+#projetos button{
+    background-color: #ea8fab; /*cor do botao*/
+    color: white; /*cor da fonte*/
+    font-family: "IBM Plex Mono", monospace; /*estilo da fonte*/
+    padding: 10px 15px; /*Tamanho do botao*/
+    font-weight: 640; /*peso ou grossura da fonte pra deixar ela em negrito*/
+    border-radius: 17PX ; /*deixar a borda arrendondada do botao*/
+    border: white; /*nao sei*/
+    text-align: center;
+    margin-top: 22px;
+}
+
+#projetos h3{
+    text-align: center;
+}
+
+#projetos p{
+    margin-top: 15px;
+    text-align: center;
+}
+
+/*rodape do site*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #401f18; /*fundo do rodape*/
+    color: #f5cad9; /*cor da fonte*/
+    font-family: "IBM Plex Mono", monospace; /*estilo da fonte*/
+}
+
+
+#sociais{
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+#textos{
+    display: flex;
+}
+
+footer img{
+   height: 40px;
+   width: 40px;
+   object-fit: cover;
+}
+
+footer h3{
+    font-weight: 700;
+    font-size: 40px;
+    margin-left: 25px;
+}
+
+footer h4{
+    font-weight: 700;
+    font-size: 22px;
+    margin-left: 25px;
+}
