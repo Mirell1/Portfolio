@@ -21,9 +21,16 @@ header{
     align-items: center;
 }
 
+/*bloco que agrupa nome e sobrenome no header (antes era uma div sem classe)*/
+.identidade{
+    display: flex;
+    flex-direction: column;
+}
+
 nav{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 40%;
 }
 
@@ -38,6 +45,7 @@ nav button{
     color: white; /*cor da fonte*/
     border: solid 3px white; /*estilo, tamnho e cor da margem do meu botao*/
     margin: 5px;
+    cursor: pointer;
 }
 
 /*bloco onde vai meu nome no header*/
@@ -63,19 +71,43 @@ main{
 /*seção onde fica a minha apresentação inicial*/
 #apresentação {  
     background-color: aqua;
-    height: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
     width: 900px;
+    max-width: 100%;
+    padding: 40px 30px;
     color: #401f18; /*cor do texto*/
     font-family: "IBM Plex Mono", monospace; /*fonte o texto*/
     font-weight: 500; /*peso ou grossura do texto pra deixar ele em negrito*/
     font-style: normal; /*estilo da fonte*/
 }
 
+/*bloco que agrupa titulo, paragrafo e redes sociais (texto da apresentação)*/
+.apresentacao-texto{
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+}
+
 /*parte textual da apresentacao*/
 .eu{
     display: flex; /*ativa o modo de display flexivel, permitindo posicionar os elemntos como voce quer*/
-  /*tamanho que ela ocupa na tela*/
+    flex-direction: column;
     margin-top: 10px; /*margem da parte de cima separando o header da seção da apresentação*/
+}
+
+.eu p{
+    margin-top: 10px;
+}
+
+/*bloco que agrupa os icones de redes sociais abaixo do texto*/
+.redes-sociais{
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
 }
 
 /*as imagens que estao no bloco da "eu" da apresentação*/
@@ -96,6 +128,7 @@ main{
     height: 200px; /*altura da imagem*/
     width: 200px; /*largura da imagem*/
     object-fit: cover; /*pra nao distorcer a imagem*/
+    flex-shrink: 0;
     }
 
 /*seção do meu "sobre mim"*/
@@ -117,6 +150,7 @@ main{
     font-weight: 700; /*peso ou grossura do texto pra deixar ele em negrito*/
     font-style: normal; /*forma da fonte*/
     width: 500px;
+    max-width: 100%;
 }
 
 #descricao p{
@@ -134,7 +168,8 @@ main{
 
 .habil{
     display: flex;
-
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*blocos com as minhas soft skils*/
@@ -227,6 +262,13 @@ main{
     font-family: "IBM Plex Mono", monospace; /*estilo da fonte*/
     margin: 15px;
     margin-bottom: 270px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*efeito hover suave*/
+}
+
+/*efeito hover moderno: o card sobe levemente e ganha sombra*/
+.trabalhos:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(64, 31, 24, 0.25); /*sombra usando o marrom já existente na paleta*/
 }
 
 /*imagens dos meus projetos*/
@@ -234,6 +276,12 @@ main{
     height: 200px; /*altura*/
     width: 200px; /*largura*/
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/*a imagem do card ganha um leve zoom no hover*/
+.trabalhos:hover img{
+    transform: scale(1.05);
 }
 
 .trabalhos P{
@@ -244,6 +292,7 @@ main{
 /*secão onde sera exposto meus trabalhos*/
 #projetos{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 100px;
     background-color: #f5cad9;
     justify-content: center;
@@ -261,6 +310,7 @@ main{
     border: white; /*nao sei*/
     text-align: center;
     margin-top: 22px;
+    cursor: pointer;
 }
 
 #projetos h3{
@@ -275,21 +325,43 @@ main{
 /*rodape do site*/
 footer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     background-color: #401f18; /*fundo do rodape*/
     color: #f5cad9; /*cor da fonte*/
     font-family: "IBM Plex Mono", monospace; /*estilo da fonte*/
+    padding: 30px 40px;
+    gap: 20px;
 }
 
+/*bloco "MEUS / Contatos", centralizado verticalmente dentro do footer*/
+.footer-marca{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*bloco da direita: agrupa os icones e o texto de contato*/
+.footer-contato{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
 
 #sociais{
     display: flex;
     flex-direction: column;
- 
+    gap: 12px;
+    order: 1; /*icones ficam antes (à esquerda) do texto*/
 }
 
-#textos{
+.textos{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    order: 2; /*texto de contato fica depois dos icones*/
 }
 
 footer img{
@@ -301,11 +373,72 @@ footer img{
 footer h3{
     font-weight: 700;
     font-size: 40px;
-    margin-left: 25px;
 }
 
 footer h4{
     font-weight: 700;
     font-size: 22px;
-    margin-left: 25px;
+}
+
+/* ================================
+   RESPONSIVIDADE - TABLET / CELULAR
+   ================================ */
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .identidade{
+        align-items: center;
+    }
+
+    #nome, #sobrenome{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    nav{
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    #apresentação{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .apresentacao-texto{
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .redes-sociais{
+        justify-content: center;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .footer-contato{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav button{
+        width: 80%;
+    }
 }
