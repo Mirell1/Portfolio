@@ -71,7 +71,7 @@ main{
 }
 /*seção onde fica a minha apresentação inicial*/
 #apresentação {  
-    background-color: ea8fab;
+    background-color: #ea8fab;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
