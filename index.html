@@ -24,7 +24,7 @@
             <div class="apresentacao-texto">
                 <article class="eu">
                     <h2>Olá, eu sou a &lt;Mirelly&gt;</h2>
-                    <p>Estudante de Tecnologia da informação e gosto de transformar ideias em códigos e experiencias digitais. Atualmente, estou cursando Desenvolvimento Web para ampliar meus conhecimentos visando criar projetos criativos e funcionais.</p>
+                    <p> Tenho 19 anos e sou uma estudante de Tecnologia da informação curiosa e dedicada, apaixonada por transformar ideias em código.
                     <div class="redes-sociais">
                         <img class="redes" src="./img/instagram.png" alt="Instagram">
                         <img class="redes" src="./img/linkedin.png" alt="LinkedIn">
@@ -39,14 +39,19 @@
         </div>
         <section id="sobre_mim">
             <article id="descricao">
-                <p><u>me chamo Mirelly, tenho 19 anos, minha jornada na 
-                    tecnologia comeco no ensino médio, quando entrei
-                    de “paraquedas” no curso tecnico de ADS e descobri
-                    um novo interesse pela programação. Desdee então,
-                    venho explorando diferentes areas da tecnologia,
-                    principalmente front-end, back-end e
-                    desenvolvimento web, buscafo sempre evoluir minha
-                    habilidades</u></p>
+                <p><u>Minha jornada na tecnologia começou no
+                ensino médio, onde me formei em dezembro no curso técnico de Análise e Desenvolvimento 
+                de Sistemas — foi ali que tive meu primeiro contato com HTML, CSS, javascript
+                e disciplinas mais teóricas da área.
+                <br>
+                <br>
+                No meio do ano seguinte, entrei no Instituto Percorre, no curso de Desenvolvimento Web,
+                onde aprofundei HTML, CSS e JavaScript, além de aprender a usar Git/GitHub e Canva na prática.
+                <br>
+                <br>
+                Ao concluir o curso, ingressei no programa STAR TECH, da TOTVS, com foco em Python 
+                para análise de dados, machine learning e inteligência artificial — sempre buscando a
+                prender mais e evoluir minhas habilidades com dedicação e curiosidade.</u></p>
             </article>
         </section>
         <div class="title">
@@ -100,28 +105,82 @@
             </article>
             </div>
         </section> 
+<div class="title">
+<h1 class="titulos">HOBBIES</h1>
+</div>
+<section id="hobbies">
+    <div class="hobby">
+        <img src="./img/ler.png" alt="Hobby 1">
+        <p><b>ler</b></p>
+    </div>
+    <div class="hobby hobby-meio">
+        <img src="./img/bordar.png" alt="Hobby 2">
+        <p><b>bordar</b></p>
+    </div>
+    <div class="hobby hobby-baixo">
+        <img src="./img/editar.png" alt="Hobby 3">
+        <p><b>edição <br>de imagem</b></p>
+    </div>
+</section>
         <div class="title">
         <h1 class="titulos">PROJETOS</h1>
         </div>
+
+        <!-- Carrossel de projetos: uma seta de cada lado + duas "páginas" de 3 cards cada -->
         <section id="projetos">
-            <article class="trabalhos">
-                <img  src="./img/EM BRVE.png">
-                <h3>Sayuri</h3>
-                <p>web site inspirado no da plataforma crunchyroll</p>
-                <a href="https://carinacarvalho-santos.github.io/Crunchyroll/" target="_blank"><button><u>VIEW PROJECT</u></button></a>
-            </article>
-            <article class="trabalhos">
-                <img  src="./img/EM BRVE.png">
-                <h3>Sakura</h3>
-                <p>site desenvolvido para uma grafica rapida com o publico alvo geek feminino</p>
-                <a href="https://guiisilva12.github.io/Pr-TCC/" target="_blank"><button><u>VIEW PROJECT</u></button></a>
-            </article>
-            <article class="trabalhos">
-                <img  src="./img/EM BRVE.png">
-                <h3>TCC - <br> Em breve</h3>
-                <p>Em breve</p>
-                <a><button><u>VIEW PROJECT</u></button></a>
-            </article>
+            <button class="seta-projetos seta-esquerda" id="setaEsquerda" aria-label="Projetos anteriores">&#10094;</button>
+
+            <div class="projetos-viewport">
+                <div class="projetos-track" id="projetosTrack">
+
+                    <!-- Página 1: projetos já preenchidos (texto original mantido) -->
+                    <div class="projetos-slide">
+                        <article class="trabalhos">
+                            <img  src="./img/sayurimax.png">
+                            <h3>Sayuri</h3>
+                            <p>web site inspirado no da plataforma crunchyroll. <br> Projeto de aprendizado</p>
+                            <a href="https://carinacarvalho-santos.github.io/Crunchyroll/" target="_blank"><button><u>VIEW PROJECT</u></button></a>
+                        </article>
+                        <article class="trabalhos">
+                            <img  src="./img/sakuraimpress.png">
+                            <h3>Sakura</h3>
+                            <p>site desenvolvido para uma grafica rapida com o publico alvo geek feminino</p>
+                            <a href="https://pretcc.github.io/Site-Sakura-Pr--TCC/" target="_blank"><button><u>VIEW PROJECT</u></button></a>
+                        </article>
+                        <article class="trabalhos">
+                            <img  src="./img/paulaevelise.png">
+                            <h3>TCC - Percorre.</h3>
+                            <p>web site desenvolvido para ser a loja de artesanato</p>
+                            <a href="https://guiisilva12.github.io/TCC/" target="_blank"><button><u>VIEW PROJECT</u></button></a>
+                        </article>
+                    </div>
+
+                    <!-- Página 2: 3 cards novos "em breve", mesma estrutura, sem link -->
+                    <div class="projetos-slide">
+                        <article class="trabalhos">
+                            <img  src="./img/EM BRVE.png">
+                            <h3>Em breve</h3>
+                            <p>...</p>
+                            <button><u>VIEW PROJECT</u></button>
+                        </article>
+                        <article class="trabalhos">
+                            <img  src="./img/EM BRVE.png">
+                            <h3>Em breve</h3>
+                            <p>...</p>
+                            <button><u>VIEW PROJECT</u></button>
+                        </article>
+                        <article class="trabalhos">
+                            <img  src="./img/EM BRVE.png">
+                            <h3>Em breve</h3>
+                            <p>...</p>
+                            <button><u>VIEW PROJECT</u></button>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="seta-projetos seta-direita" id="setaDireita" aria-label="Próximos projetos">&#10095;</button>
         </section>
     </main>
     <footer>
@@ -130,15 +189,21 @@
         <h3><b>Contatos</b></h3>
         </div>
         <div class="footer-contato">
-            <div id="sociais">
+            <div class="contato-item">
                 <img src="./img/contato.png" alt="Contato">
-                <img src="./img/arroba.png" alt="Email">
-                <img src="./img/balao.png" alt="Mensagem">
+                <a href="https://www.linkedin.com/in/mirelly-oliveira-nunes-342699391" target="_blank"><p>Linkedin</p></a>
             </div>
-            <div class="textos">
+            <div class="contato-item">
+                <img src="./img/arroba.png" alt="Email">
                 <p>Exoamino664@gmail.com</p>
+            </div>
+            <div class="contato-item">
+                <img src="./img/balao.png" alt="Telefone">
+                <p>11 91435-3392</p>
             </div>
         </div>
     </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
